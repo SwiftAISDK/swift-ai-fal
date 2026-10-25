@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-fal",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/fal",
+      "implementation": [
+        "packages/fal/src"
+      ],
+      "tests": [
+        "packages/fal/src/fal-error.test.ts",
+        "packages/fal/src/fal-image-model.test.ts",
+        "packages/fal/src/fal-provider.test.ts",
+        "packages/fal/src/fal-speech-model.test.ts",
+        "packages/fal/src/fal-transcription-model.test.ts",
+        "packages/fal/src/fal-video-model.test.ts",
+        "packages/fal/src/lazy-schemas.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Packages/swift-ai-fal/Sources/SwiftAIFal/FalAudioModels.swift",
+      "Packages/swift-ai-fal/Sources/SwiftAIFal/FalMediaModels.swift",
+      "Packages/swift-ai-fal/Sources/SwiftAIFal/FalProvider.swift",
+      "Packages/swift-ai-fal/Sources/SwiftAIFal/ImageInputCapabilities.swift"
+    ],
+    "tests": [
+      "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FalMediaProviderTests.swift",
+      "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FalProviderTests.swift",
+      "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FixtureDownloadTransport.swift",
+      "Packages/swift-ai-fal/Tests/SwiftAIFalTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider runtime, configuration and focused tests extracted. Existing upstream baseline, capability boundaries and gaps retained."
+}

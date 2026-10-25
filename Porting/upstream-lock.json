@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/fal",
+      "reviewedVersion": "3.0.69",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.fal`, `FalMediaProviderTests.swift`, `FalProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-mg4aS/cn54npnWNWNii2uzCMFR+uhWk7mZrofHFIj99/tQW47o/Jqa7bKTNtNMZcus6be6wH+RjR4V3663At8Q==",
+      "sourceRef": "npm:@ai-sdk/fal@3.0.69",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}

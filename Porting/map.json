@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-fal",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/fal",
+      "implementation": [
+        "packages/fal/src"
+      ],
+      "tests": [
+        "packages/fal/src/fal-error.test.ts",
+        "packages/fal/src/fal-image-model.test.ts",
+        "packages/fal/src/fal-provider.test.ts",
+        "packages/fal/src/fal-speech-model.test.ts",
+        "packages/fal/src/fal-transcription-model.test.ts",
+        "packages/fal/src/fal-video-model.test.ts",
+        "packages/fal/src/lazy-schemas.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Sources/SwiftAIFal/FalAudioModels.swift",
+      "Sources/SwiftAIFal/FalMediaModels.swift",
+      "Sources/SwiftAIFal/FalProvider.swift",
+      "Sources/SwiftAIFal/ImageInputCapabilities.swift"
+    ],
+    "tests": [
+      "Tests/SwiftAIFalTests/FalMediaProviderTests.swift",
+      "Tests/SwiftAIFalTests/FalProviderTests.swift",
+      "Tests/SwiftAIFalTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIFalTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider runtime, configuration and focused tests extracted. Existing upstream baseline, capability boundaries and gaps retained.",
+  "canonicalOnlyReferences": [],
+  "canonicalDirectory": "Packages/swift-ai-fal"
+}
