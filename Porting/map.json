@@ -30,7 +30,8 @@
       "Tests/SwiftAIFalTests/FalMediaProviderTests.swift",
       "Tests/SwiftAIFalTests/FalProviderTests.swift",
       "Tests/SwiftAIFalTests/FixtureDownloadTransport.swift",
-      "Tests/SwiftAIFalTests/TestSupport.swift"
+      "Tests/SwiftAIFalTests/TestSupport.swift",
+      "Tests/SwiftAIFalTests/Weekly20261101CredentialsTests.swift"
     ],
     "resources": []
   },
