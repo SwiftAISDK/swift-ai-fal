@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-fal",
-  "version": "1.1.1",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.1.2",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
@@ -17,22 +17,22 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "Reviewed request user-agent literal refresh only; native runtime policies and public API remain unchanged. Reviewed published upstream delta: @ai-sdk/fal 3.0.73 to 3.0.78. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance."
+      "id": "weekly-upstream-20261114",
+      "notes": "Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/fal 3.0.78 to 3.0.83. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-fal",
   "upstream": [
     {
       "name": "@ai-sdk/fal",
-      "reviewedVersion": "3.0.78",
+      "reviewedVersion": "3.0.83",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.fal`, `FalMediaProviderTests.swift`, `FalProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.fal`, `FalMediaProviderTests.swift`, `FalProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-7WGYKRMb8ZZ7ZCmWf+CDB3/1PGiJ2thj8mkiGR0TeKXEzQRimeE2WmXl6YlxPuhtjdIgODvoWgngFTp5jXwtVQ==",
-      "sourceRef": "npm:@ai-sdk/fal@3.0.78",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-LwfMPQfbh8W7Cxta5VDEr9W+WPDo4//XmrGCJJ7+AnteGChgJBHyElu+SueO9ez5VwoT/fb1KPi8dN5WC6XoTw==",
+      "sourceRef": "npm:@ai-sdk/fal@3.0.83",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "ImageModelV4",
@@ -41,7 +41,7 @@
         "TranscriptionModelV4",
         "VideoModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -60,7 +60,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Porting/map.json",
-      "sha256": "48b1cec61e663c1b3ccf916eb2d5fa50f34255ad911c2abe751851d0a991dfc3"
+      "sha256": "ba5a7e48661bd9ebeeafce27ef36f95d34b7f941becc67cbe1db8ee88293e4e1"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/README.md",
@@ -76,7 +76,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Sources/SwiftAIFal/FalProvider.swift",
-      "sha256": "96af21e873be78aabd7a7a41028692a0ec906ef65e7465de9d83c3463970bc71"
+      "sha256": "7d44281b8c676ced03df114ad23220eb5dbe2a7eed9db0853fe4918ffad395ee"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Sources/SwiftAIFal/ImageInputCapabilities.swift",
@@ -84,7 +84,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FalMediaProviderTests.swift",
-      "sha256": "1d4b499949ecb17890a214b4002d44e9828c5aba084df1c2e47879698135453e"
+      "sha256": "579c15bedb0d93673a012424916259f0082be6f3cd9ff2449cea55ee625e813f"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FalProviderTests.swift",
