@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-fal",
-  "version": "1.1.3",
-  "releaseID": "weekly-upstream-20261115",
+  "version": "1.2.0",
+  "releaseID": "upstream-parity-20261116",
   "source": {
-    "commit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
-    "baseCommit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
+    "commit": "1c457dea36be42376a6853aecd5c48ffc4942178",
+    "baseCommit": "1c457dea36be42376a6853aecd5c48ffc4942178",
     "workingTree": false,
-    "inputsSHA256": "5508ffc6347bffaed13fb29409eb856df9a7796d3ebdcb6f623d1e8871b52999"
+    "inputsSHA256": "d7b8f52add7828d7e9ed20418fe072e7db03e75483a168bb7f5c34e9d2a04a13"
   },
   "dependencies": [
     {
@@ -17,9 +17,9 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261115",
-      "notes": "Align the versioned request identity with the reviewed published package while retaining native open String model IDs and existing request, response, option, error, stream and telemetry behavior. Derived TypeScript model-ID/catalog reorganizations preserve the existing native runtime policies. Reviewed npm delta: @ai-sdk/fal 3.0.83 to 3.0.84. Validation passed: node Scripts/test-packages.mjs (55 owning packages, 2451 owning tests and 1736 compatibility tests), generation checks, 27 tooling tests, isolation/version checks, deterministic exports and minimum-dependency consumers. Documentation check/build passed (104 pages). Publication is gated by exact-source Swift 6.3.3 CI; subsequent public refs and clients are recorded in Docs/ReleaseVerification20261115.json. Paid/live-service checks were not run; this delta does not claim full-package parity.",
-      "compatibility": "Compatible versioned request identity correction; existing public selectors and dependency minimums remain. npm baselines and Swift SemVer are independent."
+      "id": "upstream-parity-20261116",
+      "notes": "Image and video provider metadata, `num_images`, validation and failure messages, transcription segments and speech endpoint match upstream.",
+      "compatibility": "Source-compatible; changes are additive. Request bodies, results, warnings and errors change to match the reviewed upstream package."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-fal",
@@ -28,7 +28,7 @@
       "name": "@ai-sdk/fal",
       "reviewedVersion": "3.0.84",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.fal`, `FalMediaProviderTests.swift`, `FalProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/WeeklyUpstreamAudit20261115.json",
+      "evidence": "`AIProviders.fal`, `FalMediaProviderTests.swift`, `FalProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/Archive/WeeklyUpstreamAudit20261115.json",
       "reviewStatus": "imported-reviewed-with-gaps",
       "archiveIntegrity": "sha512-NKqJizKauaoyw+4lEfJgzILF5EX3EeyV1veGhEVFlwj7eyb/zXP43Nh4VcSNmZCZ4IE4wp9opZcn5pzF5Kowuw==",
       "sourceRef": "npm:@ai-sdk/fal@3.0.84",
@@ -41,7 +41,7 @@
         "TranscriptionModelV4",
         "VideoModelV4"
       ],
-      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
+      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/Archive/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -60,19 +60,19 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Porting/map.json",
-      "sha256": "34b37bea4421cad5328ce0d68e138d75f3a48cd8c5a7b91171cb2d5242813431"
+      "sha256": "2a55f5dc3ec549f5805af9ad736ad5d1c758c422593d7e3666674c021c02b44f"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/README.md",
-      "sha256": "a3bdb778d704fedb7019ba81a96657f9eaa8af7f0337514d09f38a3d524df2f4"
+      "sha256": "0dff763a6464e10873689d3527aa2bdb915b36be47241b8fb538e6e55f2b855c"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Sources/SwiftAIFal/FalAudioModels.swift",
-      "sha256": "262543ae260d74de97e117984cede9ed0218b7143d2ca3d6f6cd2058eedef389"
+      "sha256": "f8e400f181b49916157fc4e0d939cad032c1a93d6e5e354f31b81c94672513a7"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Sources/SwiftAIFal/FalMediaModels.swift",
-      "sha256": "572fe22e8d3de7f149cf2798de3c31350a0b83cc19e533818e208737ed19d58a"
+      "sha256": "8321448b7da7a6f65382ed9314950f3f6a7008e68ed78ef53db83f4aae21f230"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Sources/SwiftAIFal/FalProvider.swift",
@@ -88,7 +88,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FalProviderTests.swift",
-      "sha256": "c02d9cae8669697c1da64a2cf56c0c2f2f79b4e00bc2572646df03d8eb013a9a"
+      "sha256": "aca4d27938a476e204935fb208605ca50fed10cf212f520b09772a25341dd6d0"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FalUpstreamParityTests.swift",
+      "sha256": "c5b787a63197479653918a1dba48808afe2ec7ed3add50299a651354f2f5d126"
     },
     {
       "canonicalPath": "Packages/swift-ai-fal/Tests/SwiftAIFalTests/FixtureDownloadTransport.swift",
